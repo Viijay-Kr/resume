@@ -1,9 +1,14 @@
 ---
+import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
 import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
+
+changeLanguage("en");
 ---
 
 <Layout title="Home - Vijayakrishna N.V">
   <Header />
+  <Navbar />
 </Layout>

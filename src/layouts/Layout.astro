@@ -1,17 +1,14 @@
 ---
-import { theme } from "../store/theme";
 import i18next from "i18next";
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
-
-const $theme = theme.get();
 ---
 
 <!DOCTYPE html>
-<html lang={i18next.language} class={$theme + " subpixel-antialiased"}>
+<html lang={i18next.language} class={"subpixel-antialiased"}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

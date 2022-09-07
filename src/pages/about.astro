@@ -1,0 +1,13 @@
+---
+import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+
+const { pathname } = Astro.url;
+---
+
+<Layout title="About me">
+  <Header />
+  <Navbar />
+  <h1>Page {pathname}</h1>
+</Layout>

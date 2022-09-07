@@ -3,30 +3,36 @@ import { LightMode } from "../assets/svgs/LightMode";
 import { DarkMode } from "../assets/svgs/DarkMode";
 import { useStore } from "@nanostores/react";
 import { theme } from "../store/theme";
+import { useEffect } from "react";
 interface Props extends React.PropsWithChildren {}
 
 export default function ToggleTheme() {
   const $theme = useStore(theme);
   const onToggle = () => {
     const newtheme = $theme === "dark" ? "light" : "dark";
-    document.querySelector("html")?.classList.remove($theme);
-    document.querySelector("html")?.classList.add(newtheme);
+
     theme.set(newtheme);
   };
+  useEffect(() => {
+    document.querySelector("html")?.classList.add($theme);
+    return () => {
+      document.querySelector("html")?.classList.remove($theme);
+    };
+  }, [$theme]);
   return (
-    <div className="flex flex-row justify-end flex-1">
+    <>
       {$theme === "dark" && (
         <LightMode
           onClick={onToggle}
-          className="fill-slate-800 cursor-pointer dark:fill-amber-50"
+          className="fill-slate-800 cursor-pointer dark:fill-amber-400"
         />
       )}
       {$theme === "light" && (
         <DarkMode
           onClick={onToggle}
-          className="fill-slate-800 cursor-pointer dark:fill-amber-50"
+          className="fill-slate-800 cursor-pointer dark:fill-amber-400"
         />
       )}
-    </div>
+    </>
   );
 }

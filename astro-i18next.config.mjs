@@ -4,7 +4,6 @@ export default {
   supportedLanguages: ['en', 'de'],
   defaultLanguage: "en",
   i18next: {
-    debug: true,
     initImmediate: false,
     backend: {
       loadPath: "./src/locales/{{lng}}.json",
