@@ -6,5 +6,16 @@
     "subtitle_2": "und ein Open-Source-Enthusiast",
     "job_title": "Senior-Software-Entwickler",
     "company": "Quantilope GmbH, 📍Hamburg,Germany"
-  }
+  },
+  "navbar": {
+    "about_me": "Über mich",
+    "projects": "Projekte",
+    "experience": "Berufserfahrung"
+  },
+  "about_me": {
+    "info_1": "Ich bin ein begeisterter Frontend-Entwickler, der sich leidenschaftlich für Benutzeroberflächen und Benutzererfahrungen interessiert und ein tiefes Interesse an der Programmierung und Erstellung von Softwareprodukten hat, die Probleme lösen 🤓",
+    "info_3": "Ich habe über 6 Jahre Erfahrung im Bereich Frontend-Entwicklung und mit guten Kenntnissen in",
+    "skills": "Fähigkeiten"
+  },
+  "and": "and"
 }

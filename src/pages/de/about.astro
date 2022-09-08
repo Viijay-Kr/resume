@@ -1,14 +1,14 @@
 ---
 import { changeLanguage, t } from "i18next";
-import Header from "../components/Header.astro";
-import ReactIcon from "../assets/svgs/ic-react.svg";
-import TypescriptIcon from "../assets/svgs/ic-typescript.svg";
-import NodeJSIcon from "../assets/svgs/ic-nodejs.svg";
-import Divider from "../components/Divider.astro";
-import Navbar from "../components/Navbar.astro";
-import Layout from "../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import ReactIcon from "../../assets/svgs/ic-react.svg";
+import TypescriptIcon from "../../assets/svgs/ic-typescript.svg";
+import NodeJSIcon from "../../assets/svgs/ic-nodejs.svg";
+import Divider from "../../components/Divider.astro";
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
 
-changeLanguage("en");
+changeLanguage("de");
 ---
 
 <Layout title="About me">
@@ -54,7 +54,7 @@ changeLanguage("en");
           ].map((skill) => (
             <li class="flex flex-row gap-1 text-lg items-center">
               <span class="bg-slate-800 dark:bg-amber-400 w-0.5 h-0.5 rounded-lg" />
-              <p class="text-slate-800  w-24 dark:text-amber-50">{skill}</p>
+              <p class="text-slate-800  w-20 dark:text-amber-50">{skill}</p>
               <div class="border-2  flex w-4 border-slate-800 dark:border-amber-400">
                 <div class="h-0.5 animate-skill-level-75%  bg-amber-700 dark:bg-amber-200" />
               </div>

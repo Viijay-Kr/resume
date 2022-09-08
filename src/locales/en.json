@@ -6,5 +6,16 @@
     "subtitle_2": "and a open source enthusiast",
     "job_title": "Senior Software engineer",
     "company": "Quantilope GmbH, 📍Hamburg,Germany"
-  }
+  },
+  "navbar": {
+    "about_me": "About me",
+    "projects": "Projects",
+    "experience": "Work Experience"
+  },
+  "about_me": {
+    "info_1": "I am an enthusiastic FrontEnd Developer, passionate about User interfaces and User experiences with deep interest in programming and building software products that solves problems 🤓",
+    "info_3": "I have over 6 years of experience in the field of Front end development and with good knowledge in",
+    "skills": "Skills"
+  },
+  "and": "and"
 }

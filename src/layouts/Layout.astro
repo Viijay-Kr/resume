@@ -1,5 +1,7 @@
 ---
 import i18next from "i18next";
+import "../styles/index.css";
+
 export interface Props {
   title: string;
 }
@@ -23,6 +25,8 @@ const { title } = Astro.props;
     />
   </head>
   <body class="bg-amber-50 dark:bg-slate-800">
-    <slot />
+    <main class="container w-full text-black dark:text-amber-50 mx-auto pt-2">
+      <slot />
+    </main>
   </body>
 </html>

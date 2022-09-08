@@ -1,21 +1,28 @@
 ---
+import { t } from "i18next";
+import classNames from "classnames";
+const { pathname } = Astro.url;
 ---
 
-<div class="container w-full text-black dark:text-amber-50 mx-auto">
-  <nav class="flex sm:justify-start space-x-2">
-    {
-      [
-        ["About Me", "/about"],
-        ["Projects", "/projects"],
-        ["Experience", "/experience"],
-      ].map(([title, url]) => (
-        <a
-          href={url}
-          class="rounded-md p-0.5 text-slate-800 dark:text-amber-400 font-medium hover:bg-amber-700 dark:hover:bg-amber-50 dark:hover:text-slate-800 hover:text-slate-100"
-        >
-          {title}
-        </a>
-      ))
-    }
-  </nav>
-</div>
+<nav class="flex sm:justify-start space-x-2">
+  {
+    [
+      ["navbar.about_me", "/about"],
+      ["navbar.projects", "/projects"],
+      ["navbar.experience", "/experience"],
+    ].map(([title, url]) => (
+      <a
+        href={url}
+        class={classNames(
+          "rounded-md p-0.5 text-slate-800 dark:text-amber-400 font-medium hover:bg-amber-700 dark:hover:bg-amber-50 dark:hover:text-slate-800 hover:text-slate-100",
+          {
+            "bg-amber-700 dark:bg-amber-50 dark:text-slate-800 text-slate-100":
+              pathname.includes(url),
+          }
+        )}
+      >
+        {t(title)}
+      </a>
+    ))
+  }
+</nav>

@@ -10,7 +10,7 @@ export default function ToggleTheme() {
   const $theme = useStore(theme);
   const onToggle = () => {
     const newtheme = $theme === "dark" ? "light" : "dark";
-
+    localStorage.setItem("theme", newtheme);
     theme.set(newtheme);
   };
   useEffect(() => {
@@ -19,20 +19,17 @@ export default function ToggleTheme() {
       document.querySelector("html")?.classList.remove($theme);
     };
   }, [$theme]);
-  return (
-    <>
-      {$theme === "dark" && (
-        <LightMode
-          onClick={onToggle}
-          className="fill-slate-800 cursor-pointer dark:fill-amber-400"
-        />
-      )}
-      {$theme === "light" && (
-        <DarkMode
-          onClick={onToggle}
-          className="fill-slate-800 cursor-pointer dark:fill-amber-400"
-        />
-      )}
-    </>
+  return $theme === "dark" ? (
+    <LightMode
+      key={"light"}
+      onClick={onToggle}
+      className="cursor-pointer dark:fill-amber-50"
+    />
+  ) : (
+    <DarkMode
+      key={"dark"}
+      onClick={onToggle}
+      className="fill-slate-800 cursor-pointer "
+    />
   );
 }

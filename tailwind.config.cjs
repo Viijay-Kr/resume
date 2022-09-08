@@ -13,15 +13,41 @@ module.exports = {
 		},
 		spacing: {
 			...defaultTheme.spacing,
+			0.25: "0.25rem",
 			0.5: '0.5rem',
+			0.75: '0.75rem',
 			1: '1rem',
 			1.25: '1.25rem',
 			1.5: '1.5rem',
 			2: '2rem',
 			2.5: '2.5rem',
-			3: '3rem'
+			3: '3rem',
+			3.5: '3.5rem',
+			4: '4rem'
 		},
+		fontFamily: {
+			"sans": ["Rubik", "sans-serif"],
+			"mono": ["Rubik", "sans-serif"],
+			"serif": ["Rubik", "sans-serif"]
+		},
+		keyframes: {
+			"skill-level-75%": {
+				'0%': { width: "0%" },
+				"25%": { width: '37%' },
+				"50%": { width: "75%" },
+				"100%": { width: "75%" }
+			},
+			"skill-level-50%": {
+				'0%': { width: "0%" },
+				"25%": { width: '25%' },
+				"50%": { width: "50%" },
+				"100%": { width: "50%" }
+			}
+		},
+		animation: {
+			"skill-level-75%": 'skill-level-75% 1.4s linear forwards',
+			"skill-level-50%": 'skill-level-50% 1.4s linear forwards',
+		}
 	},
-
 	plugins: [],
 }
