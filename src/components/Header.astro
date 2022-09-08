@@ -3,7 +3,7 @@ import { t } from "i18next";
 import { Youtube } from "../assets/svgs/Youtube";
 import ReactIcon from "../assets/svgs/ic-react.svg";
 import { GithubLight } from "../assets/svgs/GithubLight";
-import profilePic from "../assets/images/im-avatar.png";
+import profilePic from "../assets/images/ic-pic.png";
 import linkedIn from "../assets/images/pn-linkedin.png";
 import ToggleTheme from "../components/ToggleTheme";
 import { LanguageSelector } from "astro-i18next/components";
@@ -76,6 +76,6 @@ import { LanguageSelector } from "astro-i18next/components";
       class="h-2.5 p-0.5 w-56 border-2 rounded-lg dark:bg-slate-800 outline-none border-amber-700 dark:border-amber-400 text-slate-800 dark:text-amber-400"
       showFlag={true}
     />
-    <ToggleTheme client:only="react" />
+    <ToggleTheme client:load />
   </div>
 </div>
