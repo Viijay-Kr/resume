@@ -4,7 +4,7 @@ import classNames from "classnames";
 const { pathname } = Astro.url;
 ---
 
-<nav class="flex sm:justify-start space-x-2">
+<nav class="flex flex-row gap-0.5 text-sm md:text-base mt-1">
   {
     [
       ["navbar.about_me", "/about"],
@@ -14,7 +14,7 @@ const { pathname } = Astro.url;
       <a
         href={url}
         class={classNames(
-          "rounded-md p-0.5 text-slate-800 dark:text-amber-400 font-medium hover:bg-amber-700 dark:hover:bg-amber-50 dark:hover:text-slate-800 hover:text-slate-100",
+          "rounded-md p-0.5 text-slate-800 dark:text-amber-400 font-medium hover:bg-amber-700 dark:hover:bg-amber-50 dark:hover:text-slate-800 hover:text-slate-100 text-center",
           {
             "bg-amber-700 dark:bg-amber-50 dark:text-slate-800 text-slate-100":
               pathname.includes(url),

@@ -47,7 +47,7 @@ module.exports = {
 		animation: {
 			"skill-level-75%": 'skill-level-75% 1.4s linear forwards',
 			"skill-level-50%": 'skill-level-50% 1.4s linear forwards',
-		}
+		},
 	},
 	plugins: [],
 }

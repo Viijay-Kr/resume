@@ -23,13 +23,13 @@ export default function ToggleTheme() {
     <LightMode
       key={"light"}
       onClick={onToggle}
-      className="cursor-pointer dark:fill-amber-50"
+      className="cursor-pointer w-1.5 h-1.5 md:h-2 md:w-2 inline-block dark:fill-amber-50"
     />
   ) : (
     <DarkMode
       key={"dark"}
       onClick={onToggle}
-      className="fill-slate-800 cursor-pointer "
+      className="fill-slate-800 w-1.5 h-1.5 md:h-2 md:w-2  inline-block cursor-pointer "
     />
   );
 }
