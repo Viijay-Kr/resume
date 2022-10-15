@@ -1,5 +1,5 @@
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
 import astroI18next from "astro-i18next";
 import tailwind from "@astrojs/tailwind";
 
@@ -7,6 +7,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [astroI18next(), react(), tailwind()],
   build: {
-    format: 'directory'
-  }
+    format: "directory",
+  },
 });
