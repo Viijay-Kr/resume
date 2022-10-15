@@ -4,11 +4,112 @@ import Layout from "../../layouts/Layout.astro";
 import "../../styles/index.css";
 import Header from "../../components/Header.astro";
 import Navbar from "../../components/Navbar.astro";
+import classNames from "classnames";
+import { NPM } from "../../assets/svgs/NPM";
+import { GithubLight } from "../../assets/svgs/GithubLight";
+import { VsCodeLight } from "../../assets/svgs/VsCode";
+import Divider from "../../components/Divider.astro";
 
 changeLanguage("de");
+
+interface Projects {
+  title: string;
+  links: Array<{
+    name: string;
+    link: string;
+  }>;
+  languages: string[];
+  description: string;
+}
+const projects: Projects[] = [
+  {
+    title: "React CSS Modules",
+    languages: ["typescript", "node js", "vs code"],
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Viijay-Kr/react-ts-css",
+      },
+      {
+        name: "vscode",
+        link: "https://marketplace.visualstudio.com/items?itemName=viijay-kr.react-ts-css",
+      },
+    ],
+    description:
+      "VS Code extensions enabling CSS modules support in Typescript based React projects",
+  },
+  {
+    title: "CSS Scanner",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Viijay-Kr/browser-scan/tree/main/apps/scanner-app",
+      },
+      {
+        name: "NPM",
+        link: "https://www.npmjs.com/package/@browser-scan/scanner-app",
+      },
+    ],
+    languages: ["typescript", "node js", "react", "chakra-ui"],
+    description:
+      "CSS Scanner is a end to end application that can scan CSS files in your project and list the non compatible CSS properties against a browser of your choice",
+  },
+];
 ---
 
 <Layout title="Home - Vijayakrishna N.V">
   <Header />
   <Navbar />
+  <section class="mt-1 flex flex-col gap-1.25">
+    {
+      projects.map(({ title, description, languages, links }) => (
+        <>
+          <div class="flex flex-col gap-0.5 ">
+            <div class="flex flex-col md:flex-row gap-1">
+              <h2 class="text-2xl md:text-3xl font-bold text-amber-700 dark:text-light-blue">
+                {title}
+              </h2>
+              <div class="flex flex-row gap-1">
+                {languages.map((lang, index) => (
+                  <span
+                    class={classNames(
+                      "p-0.5 text-sm md:text-base font-medium rounded-2xl",
+                      `animate-opacify`,
+                      {
+                        ["bg-blue-800 text-slate-50"]:
+                          lang === "typescript" || lang === "vs code",
+                        ["bg-green-500 text-slate-800"]: lang === "node js",
+                        ["bg-blue-300 text-slate-800"]: lang === "react",
+                        ["bg-green-300 text-slate-800"]: lang === "chakra-ui",
+                        ["text-slate-100 bg-gray-500"]: lang === "socket.io",
+                      }
+                    )}
+                  >
+                    {lang}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <p class="text-lg leading-1.25 w-full md:w-1/2 text-slate-800 dark:text-amber-50 ">
+              {description}
+            </p>
+            <div class="flex flex-row gap-1">
+              {links.map(({ link, name }) => (
+                <a href={link} target="_blank">
+                  {name === "Github" && (
+                    <GithubLight className="fill-black dark:fill-amber-50" />
+                  )}
+                  {name === "vscode" && (
+                    <VsCodeLight className="fill-black dark:fill-amber-50" />
+                  )}
+                  {name === "NPM" && <NPM />}
+                </a>
+              ))}
+            </div>
+          </div>
+          <Divider />
+        </>
+      ))
+    }
+  </section>
 </Layout>
