@@ -26,7 +26,7 @@ export default {
             info_3:
               "I have over 6 years of experience in Front end development with good knowledge in",
             info_4:
-              "Constantly trying to improve my and my colleagues developer experience ⚒️.",
+              "Constantly trying to improve my and my team's developer experience ⚒️.",
             info_5: "Currently trying to contribute to VSCode",
             skills: "Skills",
           },
@@ -35,7 +35,7 @@ export default {
             quantilope: {
               company_name: "Quantilope GmbH, Hamburg,Germany",
               role_1:
-                "At Quantilope , I play an integral role in helping the market research industry by developing cutting end Consumer anytime user interface platform.",
+                "At Quantilope , I play an integral role in helping the market research industry by developing cutting edge Consumer Anytime user interface platform.",
               role_2:
                 "I work with a team of Backend and Front end developers who are experts in Typescript , React and Node JS. We together as a team are responsible for Data Acquisition and Data Quality platform of Quantilope.Our mission as a team is to improve the market research platform by providing  cutting edge user interfaces that makes surveys more playful and inspiring to fill",
               role_3:
@@ -71,7 +71,7 @@ export default {
               role_1:
                 "Being the core member of the front end team , I helped Razorthink to build their Customer facing application using React, Redux, and redux-saga.",
               role_2:
-                "I contributed in setting up the Development environment and Git workflow for releases and Architecture changes",
+                "I contributed in setting up the Development environment and Git workflow for releases and architecture 🏛️",
               role_3:
                 "I explored all possible solutions for a problem and solve them more precisely.I oversaw the potential risks and improvements in the codebase and helped overcome them.",
               achievement_1:
@@ -86,12 +86,12 @@ export default {
               role_1:
                 "Being a Junior developer, I managed to work on projects independently focusing on client requirements.",
               role_2:
-                "Developed Complex web applications that involved working with Canvas and SVG",
+                "Developed Complex web applications that involved working with HTML Canvas and SVG",
               role_3:
                 "Worked in a self managed project called Caselets. Caselets was a incubator start up which planned to help businesses show case their Research and Field work . I teamed with the founder and helped him set up a the whole project using Firebase and React",
               achievement_3: "I began my React JS Journey",
               achievement_2:
-                "Gained more passiong towards front end development",
+                "Gained more passion towards front end development",
               achievement_1:
                 "Worked as a consultant for cleartip.com where I learned about scalable systems used by millions of daily users",
             },

@@ -63,6 +63,7 @@ const jobs = [
     acheivements: [
       "experience.razorthink.achievement_1",
       "experience.razorthink.achievement_2",
+      "experience.razorthink.achievement_3",
     ],
     from: "Jul 2017",
     till: "Oct 2018",
@@ -94,23 +95,26 @@ const jobs = [
 <Layout title="Home - Vijayakrishna N.V">
   <Header />
   <Navbar />
-  <section class="mt-1 px-0.25 flex flex-col">
-    <h2 class="text-lg leading-6 my-1 dark:text-slate-300">
-      So usually one would start saying about their work experience from present
-      to past.(like LinkedIn Profiles :🔝 ⬇)<br /> However I would like you to know
-      how I began my journey and became a Front end developer. So I will be going
-      from past to present
+  <section class="px-0.25 flex flex-col">
+    <h2 class="text-lg leading-9 my-1 dark:text-slate-300">
+      So usually one would start their jobs journey from the present to the
+      past. (like LinkedIn Profiles :🔝 ⬇).<br /> However I would like you to know
+      how I began my journey and became a Front end developer. Therefor I'll be going
+      from the past to the present
       <br /><br />
       So I just graduated from college. An year before my graduation, I started building
       websites for my college using PHP
-      <br /> Later I realized writing PHP felt lousy and picked up Javascript.
-      <br /> I soon realised that I want to continue writing Javascript and turned
-      down my first job offer which would have gone south of what I actually wanted.
-      (May be JAVA 🤔)
-      <br />Anyways, I decided to join a start up which was nothing when I
-      started but still decided to take the risk since it was a Javascript role
-      :YAY 😁
-      <br /><br /><p class="text-xl dark:text-slate-400 font-bold">
+      <br /> Later I realized writing PHP felt lousy.Hence I decided to learn Javascript.
+      <br /> I soon realised that I want to continue writing Javascript in my future
+      jobs.<br />
+      <p class="text-amber-700 dark:text-amber-300">
+        This preference made me turn down my first job offer in college which
+        would have gone south of what I actually wanted to do. (May be JAVA 🤔)
+      </p>
+      <br />
+      So, I decided to join a start up which was nothing when I started but still
+      decided to take the risk since it was a Javascript role :YAY 😁
+      <br /><p class="text-xl dark:text-amber-300 font-bold">
         That Start up was ⬇️
       </p>
     </h2>
@@ -130,14 +134,14 @@ const jobs = [
           }) => (
             <div class="flex flex-col gap-0.5 mb-2">
               <div class="flex flex-col lg:flex-row items-center gap-0.25">
-                <h2 class="text-2xl font-semibold dark:text-amber-400">
+                <h2 class="text-2xl text-amber-700 font-semibold dark:text-light-blue">
                   🕵️ {title}
                 </h2>
                 <p>-</p>
                 <a
                   target="_blank"
                   href={company_link}
-                  class="dark:text-light-blue font-medium text-blue-800 cursor-pointer"
+                  class="dark:text-blue-300 font-medium text-blue-800 cursor-pointer"
                 >
                   {t(company)}
                 </a>
@@ -153,7 +157,7 @@ const jobs = [
                   ))}
                 </div>
                 <div class="text-lg lg:w-1/2 dark:text-slate-300 font-normal flex flex-col gap-0.5">
-                  <h3 class="text-xl font-bold dark:text-amber-500">
+                  <h3 class="text-xl font-bold text-amber-700 dark:text-light-blue">
                     Key Achievements 🏆
                   </h3>
                   <Divider classnames={["border", "dark:border-slate-500"]} />

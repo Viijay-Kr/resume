@@ -54,6 +54,13 @@ const projects: Projects[] = [
     description:
       "CSS Scanner is a end to end application that can scan CSS files in your project and list the non compatible CSS properties against a browser of your choice",
   },
+  {
+    title: "My Website",
+    links: [],
+    languages: ["typescript", "react", "astro", "tailwindcss", "netlify"],
+    description:
+      "I was tired of upating my resume using Adobe Acrobat and PDF editor online. Therefore I decided to use my skills to make my own portfolio website",
+  },
 ];
 ---
 
@@ -81,6 +88,9 @@ const projects: Projects[] = [
                         ["bg-green-500 text-slate-800"]: lang === "node js",
                         ["bg-blue-300 text-slate-800"]: lang === "react",
                         ["bg-green-300 text-slate-800"]: lang === "chakra-ui",
+                        ["bg-red-500 text-slate-100"]: lang === "astro",
+                        ["bg-cyan-400 text-slate-800"]:
+                          lang === "netlify" || lang === "tailwindcss",
                         ["text-slate-100 bg-gray-500"]: lang === "socket.io",
                       }
                     )}
