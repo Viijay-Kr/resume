@@ -9,12 +9,12 @@
   },
   "navbar": {
     "about_me": "About me",
-    "projects": "Projects",
-    "experience": "Work Experience"
+    "projects": "Open Source Projects",
+    "experience": "Work History"
   },
   "about_me": {
     "info_1": "I am an enthusiastic FrontEnd Developer, passionate about User interfaces and User experiences with deep interest in programming and building software products that solves problems 🤓",
-    "info_3": "I have over 6 years of experience in the field of Front end development and with good knowledge in",
+    "info_3": "I have over 6 years of experience in Front end development with good knowledge in",
     "skills": "Skills"
   },
   "and": "and"

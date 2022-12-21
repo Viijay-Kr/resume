@@ -7,6 +7,7 @@ import NodeJSIcon from "../assets/svgs/ic-nodejs.svg";
 import Divider from "../components/Divider.astro";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import { VsCodeLight } from "../assets/svgs/VsCode";
 
 changeLanguage("en");
 ---
@@ -30,6 +31,13 @@ changeLanguage("en");
       {t("and")}
       NodeJS
       <img class="inline-block" src={NodeJSIcon} width="25" height="25" />
+    </p>
+    <p>
+      {t("about_me.info_4")}
+    </p>
+    <p class="flex flex-row gap-0.5">
+      {t("about_me.info_5")}
+      <VsCodeLight className="fill-black dark:fill-amber-50" />
     </p>
   </section>
   <section

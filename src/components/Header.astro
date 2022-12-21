@@ -44,7 +44,8 @@ import { LanguageSelector } from "astro-i18next/components";
           target="_blank"
           href={"https://github.com/Viijay-Kr"}
           class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125"
-          ><GithubLight className="fill-black dark:fill-amber-50 " />
+        >
+          <GithubLight className="fill-black dark:fill-amber-50 " />
         </a>
         <a
           href="https://www.linkedin.com/in/vijay-krishna-7a557291/"
@@ -74,10 +75,6 @@ import { LanguageSelector } from "astro-i18next/components";
   <div
     class="flex-row order-2 items-center lg:order-3 flex-1 flex justify-end gap-1"
   >
-    <LanguageSelector
-      class="h-2.5 p-0.5 md:w-52 flex-shrink-0 border-2 rounded-lg dark:bg-slate-800 outline-none border-amber-700 dark:border-amber-400 text-slate-800 dark:text-amber-400"
-      showFlag={true}
-    />
     <ToggleTheme client:load />
   </div>
 </div>
