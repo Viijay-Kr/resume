@@ -1,4 +1,3 @@
-import type React from "react";
 import { LightMode } from "../assets/svgs/LightMode";
 import { DarkMode } from "../assets/svgs/DarkMode";
 import { useStore } from "@nanostores/react";
