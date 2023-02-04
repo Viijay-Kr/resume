@@ -26,9 +26,7 @@ module.exports = {
       4: "4rem",
     },
     fontFamily: {
-      sans: ["Rubik", "sans-serif", "Fira", "sans-serif"],
-      mono: ["Rubik", "sans-serif", "Fira", "sans-serif"],
-      serif: ["Rubik", "sans-serif", "Fira", "sans-serif"],
+      mono: ["Fira Code", "monospace"],
     },
     keyframes: {
       "skill-level-75%": {
