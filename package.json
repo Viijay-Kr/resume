@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "my-resume",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -14,16 +14,16 @@
   },
   "dependencies": {
     "@nanostores/react": "^0.3.0",
-    "astro": "^1.1.5",
-    "astro-i18next": "^1.0.0-beta.9",
+    "astro": "^2.0.0",
+    "astro-i18next": "^1.0.0-beta.17",
     "classnames": "^2.3.1",
     "i18next-fs-backend": "^1.1.5",
     "nanostores": "^0.6.0"
   },
   "devDependencies": {
     "@astrojs/netlify": "^1.0.2",
-    "@astrojs/react": "^1.1.1",
-    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/react": "^2.0.0",
+    "@astrojs/tailwind": "^3.0.0",
     "@types/react": "^18.0.18",
     "netlify-cli": "^11.5.1",
     "prettier": "^2.7.1",

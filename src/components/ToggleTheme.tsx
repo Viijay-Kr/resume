@@ -9,7 +9,6 @@ export default function ToggleTheme() {
   const $theme = useStore(theme);
   const onToggle = () => {
     const newtheme = $theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", newtheme);
     theme.set(newtheme);
   };
   useEffect(() => {

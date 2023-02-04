@@ -1,10 +1,12 @@
 ---
 import { changeLanguage, t } from "i18next";
+import { Trans } from "astro-i18next/components";
 import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
 import Header from "../components/Header.astro";
 import Navbar from "../components/Navbar.astro";
 import Divider from "../components/Divider.astro";
+import Title from "../components/Title.astro";
 
 changeLanguage("en");
 
@@ -36,15 +38,12 @@ const jobs = [
     roles: [
       "experience.about_you.role_1",
       "experience.about_you.role_2",
-      "experience.about_you.role_3",
-      "experience.about_you.role_4",
-      "experience.about_you.role_5",
-      "experience.about_you.role_6",
     ],
     acheivements: [
       "experience.about_you.achievement_1",
       "experience.about_you.achievement_2",
       "experience.about_you.achievement_3",
+      "experience.about_you.achievement_4",
     ],
     from: "Nov 2018",
     till: "Oct 2021",
@@ -92,87 +91,77 @@ const jobs = [
 ];
 ---
 
-<Layout title="Home - Vijayakrishna N.V">
-  <Header />
-  <Navbar />
-  <section class="px-0.25 flex flex-col">
-    <h2 class="text-lg leading-9 my-1 dark:text-slate-300">
-      So usually one would start their jobs journey from the present to the
-      past. (like LinkedIn Profiles :🔝 ⬇).<br /> However I would like you to know
-      how I began my journey and became a Front end developer. Therefor I'll be going
-      from the past to the present
-      <br /><br />
-      So I just graduated from college. An year before my graduation, I started building
-      websites for my college using PHP
-      <br /> Later I realized writing PHP felt lousy.Hence I decided to learn Javascript.
-      <br /> I soon realised that I want to continue writing Javascript in my future
-      jobs.<br />
-      <p class="text-amber-700 dark:text-amber-300">
-        This preference made me turn down my first job offer in college which
-        would have gone south of what I actually wanted to do. (May be JAVA 🤔)
-      </p>
-      <br />
-      So, I decided to join a start up which was nothing when I started but still
-      decided to take the risk since it was a Javascript role :YAY 😁
-      <br /><p class="text-xl dark:text-amber-300 font-bold">
-        That Start up was ⬇️
-      </p>
-    </h2>
-    {
-      jobs
-        .reverse()
-        .map(
-          ({
-            title,
-            roles,
-            from,
-            till,
-            company,
-            totalDuration,
-            company_link,
-            acheivements,
-          }) => (
-            <div class="flex flex-col gap-0.5 mb-2">
-              <div class="flex flex-col lg:flex-row items-center gap-0.25">
-                <h2 class="text-2xl text-amber-700 font-semibold dark:text-light-blue">
-                  🕵️ {title}
-                </h2>
-                <p>-</p>
-                <a
-                  target="_blank"
-                  href={company_link}
-                  class="dark:text-blue-300 font-medium text-blue-800 cursor-pointer"
-                >
-                  {t(company)}
-                </a>
-              </div>
-              <p class="dark:text-slate-400 text-slate-700">
-                Full Time . {from} to {till} . {totalDuration}
-              </p>
-              <Divider classnames={["border", "dark:border-slate-500"]} />
-              <section class="flex flex-col lg:flex-row gap-1.5">
-                <div class="text-base my-1 lg:w-1/2 dark:text-slate-300 font-normal flex flex-col gap-0.5">
-                  {roles.map((role) => (
-                    <p>{t(role)}</p>
-                  ))}
-                </div>
-                <div class="text-lg lg:w-1/2 dark:text-slate-300 font-normal flex flex-col gap-0.5">
-                  <h3 class="text-xl font-bold text-amber-700 dark:text-light-blue">
-                    Key Achievements 🏆
-                  </h3>
-                  <Divider classnames={["border", "dark:border-slate-500"]} />
-                  {acheivements.map((acheivement) => (
-                    <div>
-                      <span class="text-lg dark:text-amber-300 font-medium">
-                        🥇 {t(acheivement)}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </section>
+<Title title="What I'm doing/did?" />
+<section class="mt-0.5 lg:px-0.25 flex flex-col">
+  {
+    jobs.map(
+      ({
+        title,
+        roles,
+        from,
+        till,
+        company,
+        totalDuration,
+        company_link,
+        acheivements,
+      }) => (
+        <div class="flex flex-col lg:flex-row gap-0.5">
+          <div class="flex lg:w-3/4 flex-col">
+            <div class="flex flex-col lg:flex-row lg:items-center gap-0.5">
+              <h2 class="text-xl text-amber-700 font-semibold dark:text-light-blue">
+                🕵️ {title}
+              </h2>
+              <a
+                target="_blank"
+                href={company_link}
+                class="dark:text-blue-300 font-medium text-blue-800 cursor-pointer"
+              >
+                {t(company)}
+              </a>
             </div>
-          )
-        )
-    }
-  </section>
-</Layout>
+            <p class="dark:text-slate-400 text-sm text-slate-700">
+              Full Time . {from} to {till} . {totalDuration}
+            </p>
+            <Divider
+              classnames={[
+                "border-slate-200",
+                "my-0.25",
+                "lg:w-3/4",
+              ]}
+            />
+            <section class="flex flex-col mr-3 lg:flex-row gap-1.5">
+              <div class="text-base my-1  dark:text-slate-300 font-normal flex flex-col gap-0.5">
+                {roles.map((role) => (
+                  <p>
+                    <Trans i18nKey={role}>
+                      <span>.</span>
+                    </Trans>
+                  </p>
+                ))}
+              </div>
+            </section>
+          </div>
+          <div class="text-lg lg:w-1/3 dark:text-slate-300 font-normal flex flex-col gap-0.5">
+            <h3 class="text-xl font-bold text-amber-700 dark:text-light-blue">
+              Key Achievements 🏆
+            </h3>
+            <Divider
+              classnames={["border", "lg:w-1/2", "border-slate-200"]}
+            />
+            {acheivements.map((acheivement) => (
+              <div>
+                <span class="text-base dark:text-amber-300 font-medium">
+                  <i>🥇</i>
+                  <Trans i18nKey={acheivement}>
+                    <span></span>
+                  </Trans>
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <Divider classnames={["my-2 w-3/4 mx-auto"]} />
+      )
+    )
+  }
+</section>

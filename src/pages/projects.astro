@@ -2,13 +2,12 @@
 import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
-import Header from "../components/Header.astro";
-import Navbar from "../components/Navbar.astro";
 import classNames from "classnames";
 import { NPM } from "../assets/svgs/NPM";
 import { GithubLight } from "../assets/svgs/GithubLight";
 import { VsCodeLight } from "../assets/svgs/VsCode";
 import Divider from "../components/Divider.astro";
+import Title from "../components/Title.astro";
 
 changeLanguage("en");
 
@@ -39,6 +38,21 @@ const projects: Projects[] = [
       "VS Code extension that enables CSS modules support in Typescript based React projects.",
   },
   {
+    title: "Typescript cleanup Definitions",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Viijay-Kr/typescript-cleanup-defs",
+      },
+      {
+        name: "NPM",
+        link: "https://www.npmjs.com/package/typescript-cleanup-definitions",
+      },
+    ],
+    languages: ["typescript", "node js", "plugin"],
+    description: "A small TS plugin to refine definition results in VS Code",
+  },
+  {
     title: "CSS Scanner",
     links: [
       {
@@ -52,75 +66,70 @@ const projects: Projects[] = [
     ],
     languages: ["typescript", "node js", "react", "chakra-ui"],
     description:
-      "CSS Scanner is a end to end application that can scan CSS files in your project and list the non compatible CSS properties against a browser of your choice",
+      "A end to end application that can scan CSS files in your project and list the non compatible CSS properties against a browser of your choice",
   },
   {
     title: "My Website",
     links: [],
     languages: ["typescript", "react", "astro", "tailwindcss", "netlify"],
-    description:
-      "I was tired of upating my resume using Adobe Acrobat and PDF editor online. Therefore I decided to use my skills to make my own portfolio website",
+    description: "My portfolio website. An alternative to PDF's",
   },
 ];
 ---
 
-<Layout title="Home - Vijayakrishna N.V">
-  <Header />
-  <Navbar />
-  <section class="mt-1 flex flex-col gap-1.25">
-    {
-      projects.map(({ title, description, languages, links }) => (
-        <>
-          <div class="flex flex-col gap-0.5 ">
-            <div class="flex flex-col md:flex-row gap-1">
-              <h2 class="text-2xl md:text-3xl font-bold text-amber-700 dark:text-light-blue">
-                {title}
-              </h2>
-              <div class="flex flex-row gap-1">
-                {languages.map((lang, index) => (
-                  <span
-                    class={classNames(
-                      "p-0.5 text-sm md:text-base font-medium rounded-2xl",
-                      `animate-opacify`,
-                      {
-                        ["bg-blue-800 text-slate-50"]:
-                          lang === "typescript" || lang === "vs code",
-                        ["bg-green-500 text-slate-800"]: lang === "node js",
-                        ["bg-blue-300 text-slate-800"]: lang === "react",
-                        ["bg-green-300 text-slate-800"]: lang === "chakra-ui",
-                        ["bg-red-500 text-slate-100"]: lang === "astro",
-                        ["bg-cyan-400 text-slate-800"]:
-                          lang === "netlify" || lang === "tailwindcss",
-                        ["text-slate-100 bg-gray-500"]: lang === "socket.io",
-                      }
-                    )}
-                  >
-                    {lang}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <p class="text-lg leading-1.25 w-full md:w-1/2 text-slate-800 dark:text-amber-50 ">
-              {description}
-            </p>
-            <div class="flex flex-row gap-1">
-              {links.map(({ link, name }) => (
-                <a href={link} target="_blank">
-                  {name === "Github" && (
-                    <GithubLight className="fill-black dark:fill-amber-50" />
+<Title title="Some things I've done" />
+<section class="mt-1 flex flex-col gap-1.25">
+  {
+    projects.map(({ title, description, languages, links }, index) => (
+      <>
+        <div class="flex flex-col gap-0.5 ">
+          <div class="flex flex-col md:flex-row gap-0.25">
+            <h2 class="text-xl md:text-xl font-bold text-amber-700 dark:text-light-blue">
+              {title}
+            </h2>
+            <div class="flex flex-row gap-0.25">
+              {languages.map((lang, index) => (
+                <span
+                  class={classNames(
+                    "p-0.5 bg-slate-100 text-xs font-medium rounded-2xl",
+                    `animate-opacify`,
+                    {
+                      ["bg-blue-800 text-slate-50"]:
+                        lang === "typescript" || lang === "vs code",
+                      ["bg-green-500 text-slate-800"]: lang === "node js",
+                      ["bg-blue-300 text-slate-800"]: lang === "react",
+                      ["bg-green-300 text-slate-800"]: lang === "chakra-ui",
+                      ["bg-red-500 text-slate-100"]: lang === "astro",
+                      ["bg-cyan-400 text-slate-800"]:
+                        lang === "netlify" || lang === "tailwindcss",
+                      ["text-slate-100 bg-gray-500"]: lang === "socket.io",
+                    }
                   )}
-                  {name === "vscode" && (
-                    <VsCodeLight className="fill-black dark:fill-amber-50" />
-                  )}
-                  {name === "NPM" && <NPM />}
-                </a>
+                >
+                  {lang}
+                </span>
               ))}
             </div>
           </div>
-          <Divider />
-        </>
-      ))
-    }
-    <p class="text-xl">More to come ....</p>
-  </section>
-</Layout>
+          <p class="text-base leading-1.25 w-full md:w-1/2 text-slate-800 dark:text-amber-50 ">
+            {description}
+          </p>
+          <div class="flex flex-row gap-1">
+            {links.map(({ link, name }) => (
+              <a href={link} target="_blank">
+                {name === "Github" && (
+                  <GithubLight className="fill-black dark:fill-amber-50" />
+                )}
+                {name === "vscode" && (
+                  <VsCodeLight className="fill-black dark:fill-amber-50" />
+                )}
+                {name === "NPM" && <NPM />}
+              </a>
+            ))}
+          </div>
+        </div>
+        {index !== projects.length - 1 && <Divider classnames={["lg:w-1/2"]} />}
+      </>
+    ))
+  }
+</section>

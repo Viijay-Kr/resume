@@ -2,12 +2,17 @@
 import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import Navbar from "../components/Navbar.astro";
+import About from "./about.astro";
+import Projects from "./projects.astro";
+import Experience from "./experience.astro";
+import Divider from "../components/Divider.astro";
 
 changeLanguage("en");
 ---
 
 <Layout title="Projects - Vijayakrishna N.V">
   <Header />
-  <Navbar />
+  <About />
+  <Projects />
+  <Experience />
 </Layout>

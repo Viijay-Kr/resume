@@ -4,14 +4,14 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/"
-  to = "/about"
+  from = "/about"
+  to = "/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/de"
-  to = "/de/about"
+  to = "/"
   status = 301
   force = true
   
