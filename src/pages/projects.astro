@@ -69,6 +69,21 @@ const projects: Projects[] = [
       "A end to end application that can scan CSS files in your project and list the non compatible CSS properties against a browser of your choice",
   },
   {
+    title: "Feature Contribution to VS code",
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/microsoft/vscode/pull/169819",
+      },
+      {
+        name: "vscode",
+        link: "https://code.visualstudio.com/updates/v1_76",
+      },
+    ],
+    description: "First VS code feature contribution.",
+    languages: ["typescript", "node js", "vs code"],
+  },
+  {
     title: "My Website",
     links: [],
     languages: ["typescript", "react", "astro", "tailwindcss", "netlify"],
@@ -91,11 +106,13 @@ const projects: Projects[] = [
               {languages.map((lang, index) => (
                 <span
                   class={classNames(
-                    "p-0.5 bg-slate-100 text-xs font-medium rounded-2xl",
+                    "p-0.5 bg-slate-100  text-xs font-medium rounded-2xl",
                     `animate-opacify`,
                     {
                       ["bg-blue-800 text-slate-50"]:
-                        lang === "typescript" || lang === "vs code",
+                        lang === "typescript" ||
+                        lang === "vs code" ||
+                        lang === "plugin",
                       ["bg-green-500 text-slate-800"]: lang === "node js",
                       ["bg-blue-300 text-slate-800"]: lang === "react",
                       ["bg-green-300 text-slate-800"]: lang === "chakra-ui",
