@@ -1,0 +1,14 @@
+<script>
+  // @ts-ignore
+  import IngishtsTracker from "insights-kit/dist/index.js";
+  window.onload = async () => {
+    window.Insights = new IngishtsTracker({
+      trackingHost: import.meta.env.PUBLIC_INSIGHTS_HOST,
+    });
+    await window.Insights.createSession();
+    // start page tracking here
+    window.Insights.track({
+      type: "page-views",
+    });
+  };
+</script>
