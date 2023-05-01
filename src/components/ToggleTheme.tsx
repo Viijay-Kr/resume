@@ -3,13 +3,21 @@ import { DarkMode } from "../assets/svgs/DarkMode";
 import { useStore } from "@nanostores/react";
 import { theme } from "../store/theme";
 import { useEffect } from "react";
-interface Props extends React.PropsWithChildren {}
+interface Props extends React.PropsWithChildren { }
 
 export default function ToggleTheme() {
   const $theme = useStore(theme);
   const onToggle = () => {
     const newtheme = $theme === "dark" ? "light" : "dark";
     theme.set(newtheme);
+    window.Insights.track({
+      type: "click",
+      meta: {
+        source: "header",
+        title: "Theme",
+        value: newtheme,
+      }
+    })
   };
   useEffect(() => {
     document.querySelector("html")?.classList.add($theme);
@@ -17,6 +25,7 @@ export default function ToggleTheme() {
       document.querySelector("html")?.classList.remove($theme);
     };
   }, [$theme]);
+
   return $theme === "dark" ? (
     <LightMode
       key={"light"}

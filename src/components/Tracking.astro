@@ -1,6 +1,5 @@
 <script>
-  // @ts-ignore
-  import IngishtsTracker from "insights-kit/dist/index.js";
+  import IngishtsTracker from "insights-kit";
   window.onload = async () => {
     window.Insights = new IngishtsTracker({
       trackingHost: import.meta.env.PUBLIC_INSIGHTS_HOST,

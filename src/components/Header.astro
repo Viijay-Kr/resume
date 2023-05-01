@@ -33,7 +33,8 @@ import Divider from "./Divider.astro";
         <a
           target="_blank"
           href="https://www.quantilope.com"
-          class="dark:text-light-blue text-blue-800 font-semibold cursor-pointer transition-transform ease-linear duration-200 hover:scale-125"
+          title="Qunatilope"
+          class="dark:text-light-blue text-blue-800 font-semibold cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
         >
           {t("header.company")}
         </a>
@@ -41,22 +42,25 @@ import Divider from "./Divider.astro";
       <section class="py-1 flex flex-row gap-1 align-middle">
         <a
           target="_blank"
+          title="Github"
           href={"https://github.com/Viijay-Kr"}
-          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125"
+          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
         >
           <GithubLight className="fill-black dark:fill-amber-50 " />
         </a>
         <a
           href="https://www.linkedin.com/in/vijayakrishna-venkatesan-7a557291/"
           target="_blank"
-          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125"
+          title="LinkedIn"
+          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
         >
           <img height="30" width="30" src={linkedIn} />
         </a>
         <a
           href="https://youtube.com/channel/UCcSeQUrdrNObZqyqMD-913g"
           target="_blank"
-          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125"
+          title="Youtube"
+          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
         >
           <Youtube />
         </a>
@@ -78,3 +82,21 @@ import Divider from "./Divider.astro";
   </div>
 </div>
 <Divider classnames={["my-0.5 mx-auto"]} />
+
+<script>
+  const links = document.querySelectorAll(".header-links");
+  links.forEach((el) => {
+    const title = el.getAttribute("title") ?? "";
+    const href = el.getAttribute("href") ?? "";
+    el.addEventListener("click", () => {
+      window.Insights.track({
+        type: "click",
+        meta: {
+          title,
+          value: href,
+          source: "header",
+        },
+      });
+    });
+  });
+</script>

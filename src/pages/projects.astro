@@ -148,7 +148,12 @@ const projects: Projects[] = [
           </p>
           <div class="flex flex-row gap-1">
             {links.map(({ link, name }) => (
-              <a href={link} target="_blank">
+              <a
+                title={title}
+                href={link}
+                target="_blank"
+                class="project-links"
+              >
                 {name === "Github" && (
                   <GithubLight className="fill-black dark:fill-amber-50" />
                 )}
@@ -165,3 +170,21 @@ const projects: Projects[] = [
     ))
   }
 </section>
+
+<script>
+  const links = document.querySelectorAll(".project-links");
+  links.forEach((el) => {
+    const title = el.getAttribute("title") ?? "";
+    const href = el.getAttribute("href") ?? "";
+    el.addEventListener("click", () => {
+      window.Insights.track({
+        type: "click",
+        meta: {
+          title,
+          value: href,
+          source: "projects",
+        },
+      });
+    });
+  });
+</script>
