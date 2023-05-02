@@ -3,6 +3,7 @@ import { t } from "i18next";
 import { Youtube } from "../assets/svgs/Youtube";
 import ReactIcon from "../assets/svgs/ic-react.svg";
 import { GithubLight } from "../assets/svgs/GithubLight";
+import TypescriptIcon from "../assets/svgs/ic-typescript.svg";
 import profilePic from "../assets/images/ic-pic.png";
 import linkedIn from "../assets/images/pn-linkedin.png";
 import ToggleTheme from "../components/ToggleTheme";
@@ -10,78 +11,93 @@ import { LanguageSelector } from "astro-i18next/components";
 import Divider from "./Divider.astro";
 ---
 
-<div
-  class="flex flex-row flex-wrap items-center lg:items-start lg:flex-row lg:flex-nowrap gap-1"
->
-  <img
-    src={profilePic}
-    class="aspect-square order-1 h-24 w-24 md:h-40 md:w-40 object-contain object-top"
-  />
-  <h2 class="font-extrabold text-3xl order-3 lg:order-2">
-    <span class="">{t("header.title_1")}</span>
-    <span class="text-amber-700 dark:text-amber-400"
-      >{t("header.title_2")} 👋🏼</span
-    >
-    <section class="flex flex-col gap-0.25 font-normal py-0.5 text-base">
-      <p>
-        {t("header.subtitle_1")}
-        <img class="inline-block" src={ReactIcon} width="30px" height="30px" />
-        {t("header.subtitle_2")} 🛠
-      </p>
-      <p>
-        <span>{t("header.job_title")}</span>
-        <a
-          target="_blank"
-          href="https://www.quantilope.com"
-          title="Qunatilope"
-          class="dark:text-light-blue text-blue-800 font-semibold cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
-        >
-          {t("header.company")}
-        </a>
-      </p>
-      <section class="py-1 flex flex-row gap-1 align-middle">
-        <a
-          target="_blank"
-          title="Github"
-          href={"https://github.com/Viijay-Kr"}
-          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
-        >
-          <GithubLight className="fill-black dark:fill-amber-50 " />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/vijayakrishna-venkatesan-7a557291/"
-          target="_blank"
-          title="LinkedIn"
-          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
-        >
-          <img height="30" width="30" src={linkedIn} />
-        </a>
-        <a
-          href="https://youtube.com/channel/UCcSeQUrdrNObZqyqMD-913g"
-          target="_blank"
-          title="Youtube"
-          class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
-        >
-          <Youtube />
-        </a>
-      </section>
-      <section
-        class="flex text-sm leading-1 cursor-pointer flex-col gap-1 align-middle"
-      >
-        <a href="mailto: vijayakrishna.venkatesan@gmail.com"
-          >✉️ vijayakrishna.venkatesan@gmail.com</a
-        >
-        <a href="tel:+4917661332826">📞 +49 176 61332826</a>
-      </section>
-    </section>
-  </h2>
+<section>
   <div
-    class="flex-row order-2 items-center lg:order-3 flex-1 flex justify-end gap-1"
+    class="flex flex-row flex-wrap items-center lg:items-start lg:flex-row lg:flex-nowrap gap-1"
   >
-    <ToggleTheme client:load />
+    <img
+      src={profilePic}
+      class="aspect-square order-1 h-24 w-24 md:h-40 md:w-40 object-contain object-top"
+    />
+    <h2 class="font-extrabold text-3xl order-3 lg:order-2">
+      <span class="">{t("header.title_1")}</span>
+      <span class="text-amber-700 dark:text-amber-400"
+        >{t("header.title_2")} 👋🏼</span
+      >
+      <section class="flex flex-col gap-0.25 font-normal py-0.5 text-base">
+        <p>
+          <span>I'm a FullStack Developer who loves to write</span>
+          <strong>Typescript</strong>
+          <img
+            class="inline-block"
+            src={TypescriptIcon}
+            width="25"
+            height="25"
+          />
+          <span>and <strong>React</strong></span>
+          <img
+            class="inline-block"
+            src={ReactIcon}
+            width="30px"
+            height="30px"
+          />
+          <br />
+          <span>I enjoy hacking Open Source Projects ⚒️</span>
+        </p>
+        <p>
+          <span>Currently working as Senior Fullstack Developer at</span>
+          <a
+            target="_blank"
+            href="https://www.quantilope.com"
+            title="Qunatilope"
+            class="dark:text-light-blue text-blue-800 font-semibold cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
+          >
+            {t("header.company")}
+          </a>
+        </p>
+        <section class="py-1 flex flex-row gap-1 align-middle">
+          <a
+            target="_blank"
+            title="Github"
+            href={"https://github.com/Viijay-Kr"}
+            class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
+          >
+            <GithubLight className="fill-black dark:fill-amber-50 " />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/vijayakrishna-venkatesan-7a557291/"
+            target="_blank"
+            title="LinkedIn"
+            class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
+          >
+            <img height="30" width="30" src={linkedIn} />
+          </a>
+          <a
+            href="https://youtube.com/channel/UCcSeQUrdrNObZqyqMD-913g"
+            target="_blank"
+            title="Youtube"
+            class="cursor-pointer transition-transform ease-linear duration-200 hover:scale-125 header-links"
+          >
+            <Youtube />
+          </a>
+        </section>
+        <section
+          class="flex text-sm leading-1 cursor-pointer flex-col gap-1 align-middle"
+        >
+          <a href="mailto: vijayakrishna.venkatesan@gmail.com"
+            >✉️ vijayakrishna.venkatesan@gmail.com</a
+          >
+          <a href="tel:+4917661332826">📞 +49 176 61332826</a>
+        </section>
+      </section>
+    </h2>
+    <div
+      class="flex-row order-2 items-center lg:order-3 flex-1 flex justify-end gap-1"
+    >
+      <ToggleTheme client:load />
+    </div>
   </div>
-</div>
-<Divider classnames={["my-0.5 mx-auto"]} />
+</section>
 
 <script>
   const links = document.querySelectorAll(".header-links");

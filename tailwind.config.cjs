@@ -26,7 +26,8 @@ module.exports = {
       4: "4rem",
     },
     fontFamily: {
-      mono: ["Fira Code", "monospace"],
+      mono: ["Space Mono", "monospace"],
+      sans: ["Fira Sans", "monospace"]
     },
     keyframes: {
       "skill-level-75%": {

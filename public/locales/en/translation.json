@@ -2,9 +2,9 @@
     "header": {
         "title_1": "Hi there,",
         "title_2": "I'm Vijay",
-        "subtitle_1": "I'm React Engineer",
+        "subtitle_1": "I'm a FullStack Engineer",
         "subtitle_2": "and a open source enthusiast",
-        "job_title": "Senior FrontEnd Developer",
+        "job_title": "Senior Fullstack Developer",
         "company": "Quantilope GmbH, 📍Hamburg,Germany"
     },
     "navbar": {
@@ -13,7 +13,7 @@
         "experience": "Work History"
     },
     "about_me": {
-        "info_1": "I am an enthusiastic FrontEnd Developer, passionate about User interfaces and User experiences with deep interest in programming and building software products that solves problems 🤓",
+        "info_1": "I am an enthusiastic Developer, passionate about User interfaces and User experiences with deep interest in programming and building software products that solves problems 🤓",
         "info_3": "I have over <strong>6 years of experience</strong> in Front end development with good knowledge in",
         "info_4": "Constantly trying to improve my and my team's developer experience ⚒️.",
         "info_5": "Featured in VS Code Feb 2023 Release",
@@ -29,7 +29,8 @@
             "achievement_1": "Laying out a Style System using SASS",
             "achievement_2": "Integration of <strong>Chromatic</strong> to acheive 100% visual testing",
             "achievement_3": "Component System that scales well with incoming product requirements",
-            "achievement_4": "Built a <strong>VS code extension</strong> to improve the DX in the team"
+            "achievement_4": "Built a <strong>VS code extension</strong> to improve the DX in the team",
+            "achievement_5": "Improved roation logic with piping and non piping questions"
         },
         "about_you": {
             "company_name": "About You GmBH, Hamburg Germany",
@@ -45,7 +46,7 @@
             "role_1": "As a key member of the front end team, I assisted Razorthink in developing their customer-facing application using <strong>React, Redux, and redux-saga.</strong>",
             "role_2": "I helped with setting up the Git workflow for releases as well as the development environment.",
             "role_3": "I looked into every option for a solution to a problem. I monitored the possible hazards and enhancements in the codebase and assisted in overcoming them.",
-            "achievement_1": "Used a 🤓 smart rendering approach to render tabular data containing <strong>1000 rows</strong> using <strong>React virtualized list</strong>",
+            "achievement_1": "Used a 🤓 smart rendering approach to render tabular data containing <strong class='text-slate-200'>1000 rows</strong> using <strong>React virtualized list</strong>",
             "achievement_2": "<strong>Jupyter notebook</strong> integration with semantic errors and syntax highlighting",
             "achievement_3": "Lazy loading of dependencies such as Reducers, Redux Sags and Modules"
         },

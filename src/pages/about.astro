@@ -13,90 +13,85 @@ import { Trans } from "astro-i18next/components";
 changeLanguage("en");
 ---
 
-<Title title="Who am I?" />
-<div class="flex flex-col md:flex-row md:gap-1">
-  <section
-    class="flex flex-col gap-1.5 py-1 md:w-3/4 text-base text-slate-800 dark:text-amber-50"
-  >
-    <Trans i18nKey={"about_me.info_1"}>
-      <p></p>
-    </Trans>
-    <p>
-      <Trans i18nKey={"about_me.info_3"}>
-        <span></span>
-      </Trans>
-      <strong>Typescript</strong>
-      <img class="inline-block" src={TypescriptIcon} width="25" height="25" />
-      , <strong>React</strong>
-      <img class="inline-block" src={ReactIcon} width="25" height="25" />
-      {t("and")}
-      <strong>NodeJS</strong>
-      <img class="inline-block" src={NodeJSIcon} width="25" height="25" />
-    </p>
-    <Trans i18nKey={"about_me.info_4"}>
-      <p></p>
-    </Trans>
-    <p class="flex flex-row gap-0.5">
-      {t("about_me.info_5")}
-      <a
-        href="https://code.visualstudio.com/updates/v1_76#_thank-you"
-        title="VS Code Release"
-        class="text-blue-800 dark:text-amber-400"
-        target="_blank"
-        id="vs-code-feature-contribution"
-      >
-        <VsCodeLight className="fill-black dark:fill-amber-50" />
-      </a>
-    </p>
-    <p class="flex flex-row gap-0.5">
-      Check out my
-      <a
-        href="https://blogs.vijayakrishna.dev"
-        class="text-blue-800 dark:text-amber-400"
-        target="_blank"
-        id="blog-link"
-      >
-        blog.
-      </a>
-      I write about DX tools and experiences
-    </p>
-  </section>
-  <section
-    class="flex flex-col md:w-1/2 gap-1 text-slate-800 dark:text-amber-300"
-  >
-    <h2 class="text-2xl text-amber-700 dark:text-amber-400 font-bold">
-      💪 {t("about_me.skills")}
-    </h2>
-    <Divider classnames={["md:w-1/3"]} />
-    <section class="flex flex-wrap flex-row gap-0.5 md:gap-1.5">
-      <ul
-        class="flex flex-col gap-0.5 text-slate-800 dark:text-amber-50 list-none"
-      >
-        {
-          [
-            "Javascript",
-            "Typescript",
-            "HTML,CSS",
-            "NodeJS",
-            "React",
-            "Git",
-          ].map((skill) => (
-            <Skill level="75%" minW="w-32 md:w-24" skill={skill} />
-          ))
-        }
-      </ul>
-      <ul
-        class="flex flex-col gap-0.5 text-slate-800 dark:text-amber-50 list-none"
-      >
-        {
-          ["Go lang", "GraphQL", "gRPC"].map((skill) => (
-            <Skill level="50%" minW="w-32 md:w-24" skill={skill} />
-          ))
-        }
-      </ul>
+<section>
+  <Title title="Who am I?" />
+  <div class="flex flex-col md:flex-row md:gap-1">
+    <section
+      class="flex flex-col gap-0.5 py-1 md:w-3/4 text-base text-slate-800 dark:text-amber-50"
+    >
+      <p>
+        I am an enthusiastic Developer, passionate about User interfaces and
+        User experiences with deep interest in programming and building software
+        products that solves problems 🤓
+      </p>
+      <p>
+        I have over <strong>6 years of experience</strong> in Software development
+        focused mainly on large scale web applications with good knowledge in
+        <strong>Typescript</strong>
+        <img class="inline-block" src={TypescriptIcon} width="25" height="25" />
+        , <strong>React</strong>
+        <img class="inline-block" src={ReactIcon} width="25" height="25" />
+        {t("and")}
+        <strong>NodeJS</strong>
+        <img class="inline-block" src={NodeJSIcon} width="25" height="25" />
+      </p>
+      <p>
+        I constantly try to improve my and my team's developer experience ⚒️.
+      </p>
+      <p class="flex flex-row gap-0.5">
+        {t("about_me.info_5")}
+        <a
+          href="https://code.visualstudio.com/updates/v1_76#_thank-you"
+          title="VS Code Release"
+          class="text-blue-800 dark:text-amber-400"
+          target="_blank"
+          id="vs-code-feature-contribution"
+        >
+          <VsCodeLight className="fill-black dark:fill-amber-50" />
+        </a>
+      </p>
+      <p>
+        <span>Check out my</span>
+        <a
+          href="https://blogs.vijayakrishna.dev"
+          class="text-blue-800 dark:text-amber-400"
+          target="_blank"
+          id="blog-link"
+        >
+          blog.
+        </a>
+        <span>I write about DX tools and experiences</span>
+      </p>
     </section>
-  </section>
-</div>
+    <section
+      class="flex flex-col md:w-1/2 gap-1 text-slate-800 dark:text-amber-300"
+    >
+      <h2 class="text-2xl text-amber-700 dark:text-amber-400 font-bold">
+        💪 {t("about_me.skills")}
+      </h2>
+      <section class="flex flex-wrap flex-row gap-0.5 md:gap-1.5">
+        <ul
+          class="flex flex-col gap-0.5 text-slate-800 dark:text-amber-50 list-none"
+        >
+          {
+            ["Typescript", "HTML,CSS", "NodeJS", "React", "Git"].map(
+              (skill) => <Skill level="75%" minW="w-32 md:w-24" skill={skill} />
+            )
+          }
+        </ul>
+        <ul
+          class="flex flex-col gap-0.5 text-slate-800 dark:text-amber-50 list-none"
+        >
+          {
+            ["GraphQL", "gRPC", "MongoDB", "NextJS", "VSCode"].map((skill) => (
+              <Skill level="50%" minW="w-32 md:w-24" skill={skill} />
+            ))
+          }
+        </ul>
+      </section>
+    </section>
+  </div>
+</section>
 
 <script>
   const vscode = document.getElementById("vs-code-feature-contribution");
