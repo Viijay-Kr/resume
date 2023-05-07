@@ -2,7 +2,7 @@ import { LightMode } from "../assets/svgs/LightMode";
 import { DarkMode } from "../assets/svgs/DarkMode";
 import { useStore } from "@nanostores/react";
 import { theme } from "../store/theme";
-import { useEffect } from "react";
+import React,{ useEffect } from "react";
 interface Props extends React.PropsWithChildren { }
 
 export default function ToggleTheme() {

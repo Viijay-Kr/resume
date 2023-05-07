@@ -7,11 +7,8 @@ interface Props {
 const props = Astro.props;
 ---
 
-<li class="flex flex-row text-xl md:text-lg items-center">
-  <span
-    class="bg-slate-800 mr-1 md:mr-0.5 dark:bg-amber-400 w-0.5 h-0.5 rounded-lg"
-  ></span>
-  <p class={`text-slate-800 ${props.minW} mr-1.5 dark:text-amber-50`}>
+<li class="flex flex-col gap-0.5 md:gap-1.5 md:flex-row md:items-center">
+  <p class={`text-slate-800  ${props.minW}  dark:text-amber-50`}>
     {props.skill}
   </p>
   <div class="border-2 flex w-4 border-slate-800 dark:border-amber-400">
