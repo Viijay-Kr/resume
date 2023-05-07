@@ -8,6 +8,7 @@ import { GithubLight } from "../assets/svgs/GithubLight";
 import { VsCodeLight } from "../assets/svgs/VsCode";
 import Divider from "../components/Divider.astro";
 import Title from "../components/Title.astro";
+import { WebSite } from "../assets/svgs/Website";
 
 changeLanguage("en");
 
@@ -85,10 +86,15 @@ const projects: Projects[] = [
   },
   {
     title: "My Own Insights",
-    links: [],
+    links: [
+      {
+        name: "site",
+        link: "https://analytics.vijayakrishna.dev/",
+      },
+    ],
     languages: ["typescript", "react", "nextjs", "vercel", "mongodb"],
     description:
-      "A Next JS application to track insights such as page views,clicks,impressions on my website and blog using mongodb and vercel's serverless functions",
+      "A hobby project built with next js, mongodb and vercel's serverless functions to track insights such as page views,clicks on my website and blog using",
   },
   {
     title: "Feature Contribution to VS code",
@@ -111,21 +117,41 @@ const projects: Projects[] = [
     languages: ["typescript", "react", "astro", "tailwindcss", "netlify"],
     description: "My portfolio website. An alternative to PDF's",
   },
+  {
+    title: "My Blog",
+    links: [
+      {
+        name: "site",
+        link: "https://blogs.vijayakrishna.dev",
+      },
+    ],
+    languages: [
+      "typescript",
+      "react",
+      "astro",
+      "tailwindcss",
+      "netlify",
+      "markdoc",
+      "astro-themes",
+    ],
+    description:
+      "My blog site built with Astro themes(Blogster) and MarkDoc for content',
+  },
 ];
 ---
 
-<section>
+<section class="mb-1">
   <Title title="Some things I've done" />
   <ul class="mt-1 flex flex-col gap-1 px-2 list-disc">
     {
       projects.map(({ title, description, languages, links }, index) => (
         <li>
-          <div class="flex flex-col gap-0.5 ">
-            <div class="flex flex-col md:flex-row gap-0.25">
+          <div class="flex flex-col gap-0.5">
+            <div class="flex flex-col md:flex-row gap-0.5 md:items-center">
               <h2 class="text-xl md:text-xl font-bold text-amber-700 dark:text-light-blue">
                 {title}
               </h2>
-              <div class="flex flex-row gap-0.25">
+              <div class="flex flex-row items-center gap-0.5">
                 {languages.map((lang, index) => (
                   <span
                     class={classNames(
@@ -139,8 +165,10 @@ const projects: Projects[] = [
                         ["bg-green-500 text-slate-800"]:
                           lang === "node js" || lang === "mongodb",
                         ["bg-blue-300 text-slate-800"]: lang === "react",
-                        ["bg-green-300 text-slate-800"]: lang === "chakra-ui",
-                        ["bg-red-500 text-slate-100"]: lang === "astro",
+                        ["bg-green-300 text-slate-800"]:
+                          lang === "chakra-ui" || lang === "astro-themes",
+                        ["bg-red-500 text-slate-100"]:
+                          lang === "astro" || lang === "markdoc",
                         ["bg-cyan-400 text-slate-800"]:
                           lang === "netlify" || lang === "tailwindcss",
                         ["text-slate-100 bg-gray-700"]:
@@ -151,29 +179,33 @@ const projects: Projects[] = [
                     {lang}
                   </span>
                 ))}
+                {links.length ? (
+                  <Divider classnames={["w-[auto] h-[32px]"]} />
+                ) : null}
+                {links.map(({ link, name }) => (
+                  <a
+                    title={title}
+                    href={link}
+                    target="_blank"
+                    class="project-links"
+                  >
+                    {name === "Github" && (
+                      <GithubLight className="fill-black dark:fill-amber-50" />
+                    )}
+                    {name === "vscode" && (
+                      <VsCodeLight className="fill-black dark:fill-amber-50" />
+                    )}
+                    {name === "NPM" && <NPM />}
+                    {name === "site" && (
+                      <WebSite className="fill-black dark:fill-amber-50" />
+                    )}
+                  </a>
+                ))}
               </div>
             </div>
             <p class="text-base leading-1.25 w-full md:w-1/2 text-slate-800 dark:text-amber-50 ">
               {description}
             </p>
-            <div class="flex flex-row gap-1">
-              {links.map(({ link, name }) => (
-                <a
-                  title={title}
-                  href={link}
-                  target="_blank"
-                  class="project-links"
-                >
-                  {name === "Github" && (
-                    <GithubLight className="fill-black dark:fill-amber-50" />
-                  )}
-                  {name === "vscode" && (
-                    <VsCodeLight className="fill-black dark:fill-amber-50" />
-                  )}
-                  {name === "NPM" && <NPM />}
-                </a>
-              ))}
-            </div>
           </div>
         </li>
       ))
