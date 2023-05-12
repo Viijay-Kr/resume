@@ -27,10 +27,10 @@
             "role_2": "I work with a team of Backend and Front end developers who are experts in <b>Typescript , React and Node JS</b>.<br /> We as a team are responsible for Data Collection and Data Quality platform of Quantilope. Our mission as a team is to improve the market research platform by providing  cutting edge user interfaces that makes participating in surveys more playful",
             "role_3": "I am responsible for developing and maintaining the new <strong>Survey application</strong> which is state of the art . <br /> We are actively trying to beat our competitors such as <strong>Typeform , SurveyMonkey and PollFish</strong>. I work closely with designers and provide valuable feasbility feedback by judging the level of front end work that would be needed to develop the design into a usable software application",
             "achievement_1": "Laying out a Style System using SASS",
-            "achievement_2": "Integration of <strong>Chromatic</strong> to acheive 100% visual testing",
+            "achievement_2": "Integration of <strong>Chromatic</strong> to achieve 100% visual testing",
             "achievement_3": "Component System that scales well with incoming product requirements",
             "achievement_4": "Built a <strong>VS code extension</strong> to improve the DX in the team",
-            "achievement_5": "Improved roation logic with piping and non piping questions"
+            "achievement_5": "Improved rotation logic of piping and non piping questions"
         },
         "about_you": {
             "company_name": "About You GmBH, Hamburg Germany",
