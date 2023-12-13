@@ -42,6 +42,12 @@ module.exports = {
         "50%": { width: "50%" },
         "100%": { width: "50%" },
       },
+      "skill-level-25%": {
+        "0%": { width: "0%" },
+        "25%": { width: "25%" },
+        "50%": { width: "50%" },
+        "100%": { width: "50%" },
+      },
       opacify: {
         "0%": { opacity: "0" },
         "25%": { opacity: "0.2" },
@@ -49,11 +55,16 @@ module.exports = {
         "75%": { opacity: "0.7" },
         "100%": { opacity: "1" },
       },
+      background: {
+        '0%, 100%': { backgroundPosition: '0% 50%' },
+        '50%': { backgroundPosition: '100% 50%' },
+      },
     },
     animation: {
       "skill-level-75%": "skill-level-75% 1.4s linear forwards",
       "skill-level-50%": "skill-level-50% 1.4s linear forwards",
       opacify: "opacify 1s ease-in",
+      border: 'background ease infinite',
     },
   },
   plugins: [],

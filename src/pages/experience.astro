@@ -15,6 +15,7 @@ const jobs = [
       "experience.quantilope.role_1",
       "experience.quantilope.role_2",
       "experience.quantilope.role_3",
+      "experience.quantilope.role_4",
     ],
     acheivements: [
       "experience.quantilope.achievement_1",
@@ -25,11 +26,11 @@ const jobs = [
     ],
     from: "Nov 2021",
     till: "Present",
-    totalDuration: "1 yr 2 mos",
+    totalDuration: "2 yrs 1 mon",
     multipleRoles: [],
   },
   {
-    title: "Lead FrontEnd Developer",
+    title: "Senior FrontEnd Developer",
     company: "experience.about_you.company_name",
     company_link: "https://en.aboutyou.de/",
     roles: ["experience.about_you.role_1", "experience.about_you.role_2"],
@@ -85,9 +86,9 @@ const jobs = [
 ];
 ---
 
-<section>
-  <Title title="What I'm doing/did?" />
-  <ul class="gap-1 px-1 py-1 list-disc">
+<section class="my-3">
+  <Title title="Work Experience" />
+  <ul class="gap-1 px-1 list-disc">
     {
       jobs.map(
         (
@@ -103,7 +104,7 @@ const jobs = [
           },
           index
         ) => (
-          <li class="py-1 border-b-2 border-slate-300 dark:border-amber-300">
+          <li class="py-1 border-b border-slate-300 dark:border-amber-200">
             <section class="grid md:grid-cols-2">
               <section class="flex flex-col">
                 <div class="flex flex-col lg:flex-row lg:items-center gap-0.5">
@@ -138,7 +139,7 @@ const jobs = [
                 <h3 class="text-xl font-bold text-amber-700 dark:text-light-blue">
                   Key Achievements 🏆
                 </h3>
-                <ul class="py-1 border-l border-t border-b border-slate-400 dark:border-amber-400 list-disc">
+                <ul class="p-1 shadow-md  rounded-md border dark:border-amber-800 dark:shadow-amber-500 list-disc">
                   {acheivements.map((acheivement) => (
                     <li class="text-base p-0.5 list-inside dark:text-amber-200 achievement font-medium">
                       <Trans i18nKey={acheivement}>

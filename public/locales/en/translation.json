@@ -23,11 +23,12 @@
     "experience": {
         "quantilope": {
             "company_name": "Quantilope GmbH, Hamburg,Germany",
-            "role_1": "I play an integral role by developing cutting edge user interfaces for the future of  Consumer Anytime platform.",
-            "role_2": "I work with a team of Backend and Front end developers who are experts in <b>Typescript , React and Node JS</b>.<br /> We as a team are responsible for Data Collection and Data Quality platform of Quantilope. Our mission as a team is to improve the market research platform by providing  cutting edge user interfaces that makes participating in surveys more playful",
-            "role_3": "I am responsible for developing and maintaining the new <strong>Survey application</strong> which is state of the art . <br /> We are actively trying to beat our competitors such as <strong>Typeform , SurveyMonkey and PollFish</strong>. I work closely with designers and provide valuable feasbility feedback by judging the level of front end work that would be needed to develop the design into a usable software application",
+            "role_1": "Presently part of the insights team consisting of fullstack engineers, I am repsosible for building and maintaining the fullstack insights  application.It's written in React,Typescript and GraphQl and has highcharts integrated for data visualisation",
+            "role_2": "I played an integral role in Consumer survey platform by developing cutting edge user interfaces for the future of  Consumer Anytime platform.",
+            "role_3": "I worked with a team of Backend and Front end developers who are experts in <b>Typescript , React and Node JS</b>.<br /> We as a team were responsible for Data Collection and Data Quality platform of Quantilope. Our mission as a team is to improve the market research platform by providing  cutting edge user interfaces that makes participating in surveys more playful",
+            "role_4": "I was responsible for developing and maintaining the new <strong>Survey application</strong> which is state of the art . <br /> We are actively trying to beat our competitors such as <strong>Typeform , SurveyMonkey and PollFish</strong>. I work closely with designers and provide valuable feasbility feedback by judging the level of front end work that would be needed to develop the design into a usable software application",
             "achievement_1": "Laying out a Style System using SASS",
-            "achievement_2": "Integration of <strong>Chromatic</strong> to achieve 100% visual testing",
+            "achievement_2": "Integration of <strong>Chromatic</strong> to achieve <strong>100%</strong> visual testing",
             "achievement_3": "Component System that scales well with incoming product requirements",
             "achievement_4": "Built a <strong>VS code extension</strong> to improve the DX in the team",
             "achievement_5": "Improved rotation logic of piping and non piping questions"
@@ -35,7 +36,7 @@
         "about_you": {
             "company_name": "About You GmBH, Hamburg Germany",
             "role_1": "Started as intermediate developer focusing on React Native.",
-            "role_2": "Went on to become a <strong>Lead Developer</strong> focusing on Mobile Web Shop. Worked on several hot topics inside the company focusing on managerial, analytical and technical side of things",
+            "role_2": "Went on to become a <strong>Senior Developer</strong> focusing on Mobile Web Shop. Worked on several hot topics inside the company focusing on managerial, analytical and technical side of things",
             "achievement_1": "Google Optimize Integration - A project to improve AB testing capabilities",
             "achievement_2": "Graph QL POC - Proof of concept to bring GraphQL architecture.",
             "achievement_3": "GRPC Web integration",

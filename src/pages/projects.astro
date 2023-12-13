@@ -69,6 +69,17 @@ const projects: Projects[] = [
     description: "A small traversal library for MarkDoc's AST",
   },
   {
+    title: "Prisma Visualise",
+    description: "A tiny cli to view prisma schema modals in terminal.",
+    languages: ["rust", "prisma"],
+    links: [
+      {
+        name: "Github",
+        link: "https://github.com/Viijay-Kr/prisma-visualise",
+      },
+    ],
+  },
+  {
     title: "React Dev Docs",
     languages: ["typescript", "node js", "vs code"],
     links: [
@@ -112,6 +123,7 @@ const projects: Projects[] = [
     description:
       "A hobby project built with Next JS , MonogoDB and Vercel's serverless functions to track insights such as page views,clicks on my website and blog",
   },
+
   {
     title: "Feature Contribution to VS code",
     links: [
@@ -157,7 +169,7 @@ const projects: Projects[] = [
 ---
 
 <section class="mb-1">
-  <Title title="Some things I've done" />
+  <Title title="I've done" />
   <ul
     class="mt-1 px-2 flex flex-col gap-1 lg:grid lg:grid-cols-2 lg:gap-1.5 lg:px-0 list-disc"
   >
@@ -166,7 +178,7 @@ const projects: Projects[] = [
         <li>
           <div class="flex flex-col gap-0.5">
             <div class="flex flex-col md:flex-row gap-0.5 md:items-center">
-              <h2 class="text-xl md:text-xl font-bold text-amber-700 dark:text-light-blue">
+              <h2 class="text-xl md:text-xl whitespace-nowrap font-bold text-amber-700 dark:text-light-blue">
                 {title}
               </h2>
               <div class="flex flex-row flex-wrap items-center gap-0.5">
@@ -187,6 +199,8 @@ const projects: Projects[] = [
                           lang === "chakra-ui" || lang === "astro-themes",
                         ["bg-red-500 text-slate-100"]:
                           lang === "astro" || lang === "markdoc",
+                        ["bg-orange-600 text-slate-50"]: lang === "rust",
+                        ["bg-gray-600 text-slate-50"]: lang === "prisma",
                         ["bg-cyan-400 text-slate-800"]:
                           lang === "netlify" || lang === "tailwindcss",
                         ["text-slate-100 bg-gray-700"]:
