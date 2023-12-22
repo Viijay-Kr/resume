@@ -2,7 +2,7 @@
 import i18next from "i18next";
 import "../styles/index.css";
 import Tracking from "../components/Tracking.astro";
-
+import profilePic from "../assets/images/ic-pic.png";
 export interface Props {
   title: string;
 }
@@ -25,15 +25,13 @@ const { title } = Astro.props;
     <meta property="og:url" content="https://www.vijayakrishna.dev" />
     <meta
       property="og:description"
-      content={`Enthusiastic Software Developer, passionate about User interfaces and
-    User experiences with deep interest in programming and building software
-    products that solves problems 🤓`}
+      content={`Enthusiastic Software Developer, passionate about User interfaces and User experiences with deep interest in programming and building software products that solves problems 🤓`}
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Vijayakrishna NV" />
     <meta
       property="og:image"
-      content={"https://www.vijayakrishna.dev/apple-touch-icon.png"}
+      content={`https://www.vijayakrishna.dev/${profilePic}`}
     />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:site" content="https://www.vijayakrishna.dev" />
@@ -45,7 +43,7 @@ const { title } = Astro.props;
     />
     <meta
       property="twitter:image"
-      content={"https://www.vijayakrishna.dev/apple-touch-icon.png"}
+      content={`https://www.vijayakrishna.dev/${profilePic}`}
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
